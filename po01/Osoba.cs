@@ -8,6 +8,12 @@ namespace po01
 {
     class Osoba
     {
-        string imie;
+        public string Imie { get; private set; }
+
+        public string Nazwisko { get; private set; }
+
+        public string Adres { get; private set; }
+
+
     }
 }
