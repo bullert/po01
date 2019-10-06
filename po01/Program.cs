@@ -11,6 +11,13 @@ namespace po01
         static void Main(string[] args)
         {
             Osoba osoba1 = new Osoba();
+
+            osoba1.UstawDane("Bartłomiej", "Bullert", "Ulica", 1, "1", "11-111", "Poznań", "Polska");
+
+            Console.WriteLine(osoba1.PrzedstawSie());
+            Console.WriteLine("Adres korespondencyjny:");
+            Console.WriteLine(osoba1.Adres.AdresKorespondencyjny);
+            Console.ReadKey();
         }
     }
 }

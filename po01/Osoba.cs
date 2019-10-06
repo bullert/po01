@@ -12,8 +12,25 @@ namespace po01
 
         public string Nazwisko { get; private set; }
 
-        public string Adres { get; private set; }
+        public Adres Adres { get; private set; }
 
+        public void UstawDane(string imie, string nazwisko)
+        {
+            Imie = imie;
+            Nazwisko = nazwisko;
+        }
 
+        public void UstawDane(string imie, string nazwisko, string nazwaUlilcy, int numerDomu, string numerMieszkania, string kodPocztowy, string miasto, string panstwo)
+        {
+            Imie = imie;
+            Nazwisko = nazwisko;
+            Adres = new Adres();
+            Adres.UstawDane(nazwaUlilcy, numerDomu, numerMieszkania, kodPocztowy, miasto, panstwo);
+        }
+
+        public string PrzedstawSie()
+        {
+            return string.Format("Nazywam się {0} {1}", Imie, Nazwisko);
+        }
     }
 }
