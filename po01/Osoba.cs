@@ -30,7 +30,7 @@ namespace po01
 
         public string PrzedstawSie()
         {
-            return string.Format("Nazywam się {0} {1}", Imie, Nazwisko);
+            return string.Format("Nazywam się {0} {1}\n{2}", Imie, Nazwisko, Adres.AdresKorespondencyjny);
         }
     }
 }
